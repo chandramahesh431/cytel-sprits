@@ -8,6 +8,7 @@ import cytelTheme from "./materialComponents/cytelTheme";
 import { MuiThemeProvider } from "@material-ui/core";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import App from "./App";
+import Login from "./Login";
 const configureStore = store();
 
 ReactDOM.render(
@@ -16,7 +17,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route exact path="/" render={() => <App />} />
-          <Route exact path="/login" render={() => <div>Login</div>} />
+          <Route exact path="/login" render={() => <Login />} />
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

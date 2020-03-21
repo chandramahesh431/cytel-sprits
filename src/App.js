@@ -1,23 +1,26 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
-export class App extends Component {
-  componentDidMount() {
-    this.props.increment();
-  }
+export default class App extends Component {
+  // componentDidMount() {
+  //   setInterval(() => {
+  //     this.props.increment();
+  //   }, 1000);
+  // }
   render() {
-    return <div>Home: {this.props.count}</div>;
+    return <div>Home</div>;
+    // return <div>Home: {this.props.count}</div>;
   }
 }
 
-const mapStateToProps = state => ({
-  count: state.studyReducer.count
-});
+// const mapStateToProps = state => ({
+//   count: state.studyReducer.count
+// });
 
-const mapDispatchToProps = dispatch => {
-  return {
-    increment: () => dispatch({ type: "INCREMENT" })
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     increment: () => dispatch({ type: "INCREMENT" })
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
