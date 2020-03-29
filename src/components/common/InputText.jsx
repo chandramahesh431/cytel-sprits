@@ -2,12 +2,11 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 
 export default function InputText(props) {
-  const { error, autoComplete, helperText, value } = props;
+  const { error, autoComplete, helperText, value, label } = props;
   return (
     <TextField
       error={error}
-      id="outlined-error-helper-text"
-      label="Label text"
+      label={label}
       value={value}
       variant="outlined"
       helperText={helperText || ""}
@@ -19,5 +18,6 @@ InputText.defaultProps = {
   error: false,
   autoComplete: "off",
   helperText: "",
-  value: "Default Value"
+  value: "",
+  label: "Default Label"
 };

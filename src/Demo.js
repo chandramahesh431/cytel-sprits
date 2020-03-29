@@ -15,11 +15,14 @@ export default class App extends Component {
         <Typography variant="subtitle1">Subtitle 1</Typography>
         <Divider />
         <InputText />
+        <InputText label="Label text" />
+        <InputText helperText="Helper text" />
+        <InputText value="Value" helperText="Helper text" />
+        <InputText error helperText="Error message" />
         <Divider />
         <Button variant="contained" color="primary">
           Primary
         </Button>
-        <Divider />
         <Button variant="outlined" color="primary">
           Primary
         </Button>
@@ -28,9 +31,6 @@ export default class App extends Component {
         </Button>
         <Button variant="outlined" disabled>
           Disabled
-        </Button>
-        <Button variant="outlined" color="primary" href="#outlined-buttons">
-          Link
         </Button>
       </>
     );
