@@ -5,7 +5,20 @@ const cytelTheme = createMuiTheme({
   palette: {
     primary: { main: colors.primaryBlue },
     secondary: { main: colors.gray80 },
-    textPrimary: { main: colors.gray100 }
+    text: { primary: colors.gray100 }
+  },
+  breakpoints: {
+    keys: ["xs", "sm", "md", "lg", "xl"],
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920
+    }
+  },
+  shape: {
+    borderRadius: 4
   },
   typography: {
     colorTextPrimary: colors.textPrimary,
