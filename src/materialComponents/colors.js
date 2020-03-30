@@ -5,7 +5,8 @@ export const colors = {
   gray40: "#C7C7C7",
   gray20: "#E4E4E4",
   gtray0: "#F1F1F1",
-  primaryBlue: "#006DCF",
+  primaryBlue: "#FFFFFF",
   primaryGray: "#8C8E90",
-  primarySurface: "#FFFFFF"
+  primarySurface: "#FFFFFF",
+  headerBgclr: "#FFFFFF !important"
 };

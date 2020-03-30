@@ -62,6 +62,38 @@ const cytelTheme = createMuiTheme({
       root: {
         margin: "20px 0px"
       }
+    },
+    MuiAppBar: {
+      root: {
+        position: "absolute",
+        width: "100%",
+        height: "64px",
+        left: "0px",
+        top: "0px"
+      },
+      colorPrimary: {
+        background: colors.headerBgclr
+      }
+    },
+    MuiToolbar: {
+      gutters: {
+        paddingLeft: "0px !important",
+        paddingRight: "0px !important"
+      }
+    },
+    MuiAvatar: {
+      colorDefault: {
+        color: "#00529C"
+      }
+    },
+    MuiCardContent: {
+      root: {}
+    },
+    MuiLink: {
+      root: {
+        color: "blue",
+        cursor: "pointer"
+      }
     }
   }
 });
