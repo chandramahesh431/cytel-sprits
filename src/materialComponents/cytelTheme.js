@@ -94,6 +94,39 @@ const cytelTheme = createMuiTheme({
         color: "blue",
         cursor: "pointer"
       }
+    },
+    MuiTableCell: {
+      sizeSmall: {
+        position: "static",
+        height: "16px",
+        left: "0px",
+        top: "calc(50% - 16px/2)",
+        fontFamily: "Roboto",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "12px",
+        lineHeight: "16px",
+        letterSpacing: "0.4px",
+        color: "#656565",
+        flex: "none",
+        order: "0",
+        alignSelf: "center",
+        margin: "4px 0px"
+      },
+      body: {
+        position: "absolute",
+        width: "46px",
+        height: "20px",
+        left: "16px",
+        top: "calc(50% - 20px/2)",
+        fontFamily: "Roboto",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "14px",
+        lineHeight: "20px",
+        letterSpacing: "0.25px",
+        color: "#1A1A1A"
+      }
     }
   }
 });
