@@ -1,10 +1,11 @@
 .flex-container {
   display: flex;
   flex-direction: column;
+ 
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  background-color: #F1F5F8;
   text-align: center;
   line-height: 75px;
   font-size: 30px;
@@ -21,7 +22,7 @@ flex-container-nest {
 }
 
 .flex-container-nest > div {
-  background-color: #f1f1f1;
+  background-color: #F1F5F8;
   text-align: start;
   line-height: 75px;
   font-size: 30px;

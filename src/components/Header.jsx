@@ -27,7 +27,11 @@ const useStyles = makeStyles(theme => ({
     height: "30px"
   },
   pipe: {
-    marginRight: "9px"
+    marginRight: "9px",
+    color: "#C5C6C7"
+  },
+  productName: {
+    color: "#C5C6C7"
   }
 }));
 

@@ -115,7 +115,6 @@ const cytelTheme = createMuiTheme({
       },
       body: {
         position: "absolute",
-        width: "46px",
         height: "20px",
         left: "16px",
         top: "calc(50% - 20px/2)",
@@ -126,6 +125,32 @@ const cytelTheme = createMuiTheme({
         lineHeight: "20px",
         letterSpacing: "0.25px",
         color: "#1A1A1A"
+      }
+    },
+    MuiFab: {
+      root: {
+        width: "40px",
+        height: "40px",
+        backgroundColor: "#00529C",
+        color: "#FFFFFF",
+        "&:hover": {
+          width: "40px",
+          height: "40px",
+          backgroundColor: "#00529C",
+          color: "#FFFFFF"
+        }
+      },
+
+    },
+    MuiPaper: {
+      elevation4: { boxShadow: "none", borderBottom: "1px solid rgba(0, 82, 156, 0.3)" },
+      rounded: { border: "1px solid rgba(0, 82, 156, 0.3)" },
+      elevation1: { boxShadow: "none" }
+    },
+    MuiTableContainer: {
+      root: {
+        border: "1px solid #F1F5F8",
+        boxShadow: "none"
       }
     }
   }

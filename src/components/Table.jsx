@@ -12,6 +12,8 @@ import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles({
   table: {
@@ -32,15 +34,45 @@ const useStyles = makeStyles({
     marginBottom: 12
   },
   addIconTr: {
-    minHeight: "150px"
+    minHeight: "200px",
+    float: "right",
+    display: "flex",
+    flexFlow: "column-reverse",
+    paddingBottom: "15px"
   },
   addIcon: {
     left: "0%",
     right: "0%",
     top: "12.5%",
     bottom: "12.5%",
-    background: "#ffffff",
-    cursor: "pointer"
+    cursor: "pointer",
+    color: "#00529C"
+
+  },
+  rowCell: {
+    height: "20px",
+    left: "16px",
+    top: "calc(50% - 20px/2)",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "14px",
+    lineHeight: "20px",
+    letterSpacing: "0.25px",
+    color: "#1A1A1A"
+  },
+  rowCellLink: {
+    width: "230px",
+    height: "20px",
+    left: "16px",
+    top: "calc(50% - 20px/2)",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "14px",
+    lineHeight: "20px",
+    letterSpacing: "0.25px",
+    color: "#006DCF"
   }
 });
 
@@ -49,11 +81,11 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
+  createData("Project1", "Orange", "Mar-20-2019", 24, "In progress"),
+  createData("Project2", "Orange", "Jan-12-2019", 37, "In progress"),
+  createData("Project3", "Orange", "Jun-02-2019", 24, "In progress"),
+  createData("Project4", "Green", "Apr-11-2019", 67, "In progress"),
+  createData("Project5", "Black", "Aug-08-2019", 49, "In progress")
 ];
 
 export default function DenseTable() {
@@ -65,7 +97,7 @@ export default function DenseTable() {
         <div>
           <div>
             {" "}
-            <TableContainer component={Paper}>
+            <TableContainer component={Paper} >
               <Table
                 className={classes.table}
                 size="small"
@@ -85,15 +117,15 @@ export default function DenseTable() {
                   {rows.map(row => (
                     <TableRow key={row.name}>
                       <TableCell component="th" scope="row">
-                        <Link>{row.name}</Link>
+                        <Link className={classes.rowCellLink}>{row.name}</Link>
                       </TableCell>
-                      <TableCell align="left">{row.calories}</TableCell>
-                      <TableCell align="left">{row.fat}</TableCell>
-                      <TableCell align="left">{row.carbs}</TableCell>
-                      <TableCell align="left">{row.protein}</TableCell>
-                      <TableCell align="left">
+                      <TableCell align="left" className={classes.rowCell}>{row.calories}</TableCell>
+                      <TableCell align="left" className={classes.rowCell}>{row.fat}</TableCell>
+                      <TableCell align="left" className={classes.rowCell}>{row.carbs}</TableCell>
+                      <TableCell align="left" className={classes.rowCell}>{row.protein}</TableCell>
+                      <TableCell align="left" >
                         {" "}
-                        <Link>Share</Link> &nbsp; | &nbsp;<Link>Edit</Link>
+                        <Link className={classes.rowCellLink}>Share</Link> &nbsp; | &nbsp;<Link className={classes.rowCellLink}>Edit</Link>
                       </TableCell>
                     </TableRow>
                   ))}
@@ -103,9 +135,9 @@ export default function DenseTable() {
           </div>
           <div className={classes.addIconTr}>
             {" "}
-            <AddCircleOutlineIcon
-              className={classes.addIcon}
-            ></AddCircleOutlineIcon>
+            <Fab aria-label="add">
+              <AddIcon />
+            </Fab>
           </div>
         </div>
       </CardContent>
